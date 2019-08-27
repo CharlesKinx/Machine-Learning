@@ -65,7 +65,7 @@ class SimpleLinearRegression2:
     def predict(self, x_predict):
         return np.array([self._predict(x) for x in x_predict])
 
-    def _predict(self,x_single):
+    def _predict(self, x_single):
         return self.a_ * x_single + self.b_
 
     def __repr__(self):
