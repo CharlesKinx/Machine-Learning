@@ -1,13 +1,13 @@
 import numpy as np
 
+
 class SimpleLinearRegression1:
 
     def __init__(self):
         self.a_ = None
         self.b_ = None
 
-    def fit(self,x_train,y_train):
-
+    def fit(self, x_train, y_train):
         assert x_train.ndim == 1, \
             "Simple Linear Regressor can only solve single feature train data"
         assert len(x_train) == len(y_train), \
@@ -31,7 +31,7 @@ class SimpleLinearRegression1:
     def predict(self, x_predict):
         return np.array([self._predict(x) for x in x_predict])
 
-    def _predict(self,x_single):
+    def _predict(self, x_single):
         return self.a_ * x_single + self.b_
 
     def __repr__(self):
@@ -44,8 +44,7 @@ class SimpleLinearRegression2:
         self.a_ = None
         self.b_ = None
 
-    def fit(self,x_train,y_train):
-
+    def fit(self, x_train, y_train):
         assert x_train.ndim == 1, \
             "Simple Linear Regressor can only solve single feature train data"
         assert len(x_train) == len(y_train), \
