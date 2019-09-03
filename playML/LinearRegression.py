@@ -73,12 +73,12 @@ class LinearRegression:
 
         return self
 
-    def fit_sgd(self, X_train, y_train, n_iters= 1e4, t0= 5, t1=50):
+    def fit_sgd(self, X_train, y_train, n_iters=1e4, t0=5, t1=50):
 
         def dJ_sgd(theta, X_b_i, y_i):
             return X_b_i * (X_b_i.dot(theta) - y_i) * 2
 
-        def sgd(X_b, y, initial_theta, n_iters, t0 = 5, t1 =50):
+        def sgd(X_b, y, initial_theta, n_iters, t0=5, t1=50):
 
             def learning_rate(t):
                 return t0 / (t + t1)
@@ -103,4 +103,3 @@ class LinearRegression:
         self.coef_ = self._theta[1:]
 
         return self
-
